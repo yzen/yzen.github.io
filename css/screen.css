@@ -69,7 +69,13 @@ ul.posts span {
 
 .site .title .logo {
   background: url("../images/moza11y.png") no-repeat scroll 0 50% #FFFFFF;
-
+  background-size: contain;
+  width: 3em;
+  height: 3em;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  margin-left: 1em;
 }
 
 .site .title a {
