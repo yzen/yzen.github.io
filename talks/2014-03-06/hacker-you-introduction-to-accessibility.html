@@ -1,0 +1,389 @@
+---
+layout: nil
+---
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Introduction to Accessibility</title>
+
+    <meta name="author" content="Yura Zenevich">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <!-- Core and extension CSS files -->
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/core/deck.core.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/extensions/scale/deck.scale.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/themes/style/neon.css">
+    <link rel="stylesheet" media="screen" href="../../lib/deck.js/themes/transition/horizontal-slide.css">
+    <link rel="stylesheet" media="screen" href="css/hacker-you-introduction-to-accessibility.css">
+    <link rel="stylesheet" media="print" href="../../lib/deck.js/core/print.css">
+
+    <script src="../../lib/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+    <div class="deck-container">
+
+      <section class="slide" id="title">
+        <h1>Introduction to Accessibility</h1>
+      </section>
+
+      <section class="slide" id="outline">
+        <h2>Todays Outline</h2>
+        <ul>
+          <li><h3>What is Disablibility and Accessibility</h3></li>
+          <li><h3>Web Accessibility and Some Examples</h3></li>
+          <li><h3>Guidelines</h3></li>
+          <li><h3>ARIA</h3></li>
+          <li><h3>Tools</h3></li>
+        </ul>
+      </section>
+
+      <section class="slide" id="disability">
+        <h2>Disability, what is it?</h2>
+        <ul>
+          <li class="slide">
+            <strong>Environment:</strong> Where am I?
+          </li>
+          <li class="slide">
+            <strong>Tools:</strong> What am I using?
+          </li>
+          <li class="slide">
+            <strong>Task:</strong> What am I doing?
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="accessibility">
+        <h2>Accessibility, what is it?</h2>
+        <p class="slide">
+          <strong>How:</strong> do we bridge the gap between achieving a task
+          with the tools that we have in the environment that we are in?
+        </p>
+      </section>
+
+      <section class="slide" id="web-accessibility">
+        <h2>Web Accessibility</h2>
+        <p>Developers on the web have a responsibility and an opportunity to create accessible content.</p>
+        <ul>
+          <li>Information such as text, images and media</li>
+          <li>Semantics and structure</li>
+        </ul>
+        <h3>
+          Web Content Accessibility Guidelines (WCAG)
+          <p>
+            <a href="http://www.w3.org/WAI/intro/wcag.php" label="WCAG">http://www.w3.org/WAI/intro/wcag.php</a>
+          </p>
+        </h3>
+      </section>
+
+      <section class="slide" id="examples">
+        <h2>Examples</h2>
+        <h3>
+          Twitter
+          <p>
+            <a href="https://twitter.com/">https://twitter.com/</a>
+          </p>
+        </h3>
+        <h3>
+          Air Canada
+          <p>
+            <a href="http://www.aircanada.com/en/home.html">http://www.aircanada.com/en/home.html</a>
+          </p>
+        </h3>
+      </section>
+
+      <section class="slide" id="whattodo-1">
+        <h2>What Can I Do?</h2>
+        <p>A few of many accessibility tips and examples you can use:</p>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Alternative Text</h3>
+            <img src="images/doge_icecream.jpg">
+            <pre><code>&lt;img src=&quot;images/doge_icecream.jpg&quot; /&gt;</code></pre>
+          </li>
+          <li class="slide">
+            <img src="images/doge_icecream.jpg" alt="Doge Icecream">
+            <pre><code>&lt;img src=&quot;images/doge_icecream.jpg&quot; alt=&quot;Doge Ice Cream&quot; /&gt;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-2">
+        <h2>What Can I Do?</h2>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Focus Indicator</h3>
+            <input type="text" placeholder="Am I Focused?" />
+            <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Am I Focused?&quot; /&gt;</code></pre>
+          </li>
+          <li class="slide">
+            <input class="focus-good-input" type="text" placeholder="I am definitely focused!" />
+            <pre><code>&lt;input class=&quot;focus-good-input&quot; type=&quot;text&quot; placeholder=&quot;I am definitely focused!&quot; /&gt;</code></pre>
+            <pre><code>
+              .focus-good-input:focus, .focus-good-input:hover {
+                outline:1px solid red;
+                background:yellow;
+              }
+            </code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-3">
+        <h2>What Can I Do?</h2>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Contrast</h3>
+            <p class="low-contrast">This is some text with low contrast.</p>
+            <pre><code>
+              .low-contrast {
+                color: #191970;
+              }
+            </code></pre>
+          </li>
+          <li class="slide">
+            <p class="high-contrast">This is some text with high contrast.</p>
+            <pre><code>
+              .high-contrast {
+                color: yellow;
+              }
+            </code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-4">
+        <h2>What Can I Do?</h2>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Visibility</h3>
+            <h4>Bad</h4>
+            <ul>
+              <li>
+                Using <code>z-index</code> to hide objects
+              </li>
+              <li>
+                Using off screen space to hide objects
+              </li>
+              <li>
+                Using <code>opacity: 0;</code> to hide objects
+              </li>
+            </ul>
+          </li>
+          <li class="slide">
+            <h4>Good</h4>
+            <ul>
+              <li>
+                Using <code>hidden</code> attribute (if supported)
+              </li>
+              <li>
+                Using <code>display: none;</code> style
+              </li>
+              <li>
+                Using <code>visibility: hidden;</code> style
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-5">
+        <h2>What Can I Do?</h2>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Labels</h3>
+            Name:
+            <input id="name" type="text" />
+            <pre><code>
+              &lt;input id=&quot;name&quot; type=&quot;text&quot; /&gt;
+            </code></pre>
+          </li>
+          <li class="slide">
+            <label for="name">Name:</label>
+            <input id="name" type="text" />
+            <pre><code>
+              &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+              &lt;input id=&quot;name&quot; type=&quot;text&quot; /&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-6">
+        <h2>What Can I Do?</h2>
+        <p>Structure:</p>
+        <ul class="no-list">
+          <li class="slide">
+            <pre><code>
+              &lt;body&gt;
+                &lt;h1&gt;heading text..
+                &lt;section&gt;&lt;h1&gt;heading text...
+                  &lt;section&gt;&lt;h1&gt;heading text...
+                    &lt;section&gt;&lt;h1&gt;heading text...
+                    &lt;/section&gt;
+                  &lt;/section&gt;
+                &lt;/section&gt;
+              &lt;/body&gt;
+            </code></pre>
+          </li>
+          <li class="slide">
+            <pre><code>
+              &lt;body&gt;
+                &lt;h1&gt;heading text..
+                &lt;section&gt;&lt;h2&gt;heading text...
+                  &lt;section&gt;&lt;h3&gt;heading text...
+                    &lt;section&gt;&lt;h4&gt;heading text...
+                    &lt;/section&gt;
+                  &lt;/section&gt;
+                &lt;/section&gt;
+              &lt;/body&gt;
+            </code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-7">
+        <h2>What Can I Do?</h2>
+        <p>Structure and Semantics:</p>
+        <ul class="no-list">
+          <li class="slide">
+            <h3>Semantic HTML5 elements</h3>
+          </li>
+          <li class="slide">
+            <pre><code>
+              &lt;main&gt;&lt;/main&gt;
+            </code></pre>
+            <pre><code>
+              &lt;article&gt;&lt;/article&gt;
+            </code></pre>
+          </li>
+          <li class="slide">
+            <h3 class="exlaim">Do not overuse them!</h3>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="whattodo-8">
+        <h2>What Can I Do?</h2>
+        <p>
+          <h3>If you HTML is valid -<strong> GOOD</strong></h3>
+          <h3>If you follow WCAG guidelines -<strong> AMAZING</strong></h3>
+        </p>
+      </section>
+
+      <section class="slide" id="aria-1">
+        <h2>What About More Complicated Web Application?</h2>
+        <ul>
+          <li class="slide">
+            <h3>ARIA (Accessible Rich Internet Applications Suite)</h3>
+            <p>Defines a way to make Web Content and Web Applications more accessible to people with disabilities.</p>
+            <a href="http://www.w3.org/WAI/intro/aria" label="WAI-ARIA">http://www.w3.org/WAI/intro/aria</a>
+          </li>
+          <li class="slide">
+            <h3>What is ARIA?</h3>
+            <p>ARIA is an extension of the HTML.
+            <p>ARIA does not require any knowledge of other technologies.</p>
+            <p>You can start using ARIA by adding attributes to your HTML elements.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-roles">
+        <h2>Aria Roles</h2>
+        <p>Indicate the type of the element. Provides the semantics.</p>
+        <ul>
+          <li class="slide">
+            <h3>Examples of Roles</h3>
+            <ul>
+              <li class="slide">
+                Widget Roles:<code> button, alert, dialog, tablist, tabpanel, tab...</code>
+              </li>
+              <li class="slide">
+                Document Structure Roles:<code> article, math, presentation, toolbar...</code>
+              </li>
+              <li class="slide">
+                Landmark Roles:<code> main, search, complementary...</code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-states">
+        <h2>Aria States and Properties</h2>
+        <p>Provide specific Information about an object.</p>
+        <ul>
+          <li class="slide">
+            <h3>Examples of States and Properties</h3>
+            <ul>
+              <li class="slide">
+                Global States and Properties:<code> aria-describedby, aria-disabled, aria-controls, aria-labelledby...</code>
+              </li>
+              <li class="slide">
+                Widget Attributes:<code> aria-checked, aria-haspopup, aria-autocomplete...</code>
+              </li>
+              <li class="slide">
+                Relationship Attributes: <code>aria-posinset, aria-setsize...</code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="tools">
+        <h2>Tools</h2>
+        <h3>Online</h3>
+        <p><a href="http://webaim.org/resources/contrastchecker/">Contrast Checker</a></p>
+        <h3>Firefox Add-Ons</h3>
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/wave-toolbar/">WAVE Toolbar</a></p>
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a></p>
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/dom-inspector-6622/">Dom Inspector</a></p>
+        <p><a href="https://addons.mozilla.org/en-US/firefox/addon/screen-reader-simulator/">Screen Reader Simulator</a></p>
+        <h3>Chrome Extensions</h3>
+        <p><a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb">Accessibility Developer Tools</a></p>
+        <p><a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn">ChromeVox</a></p>
+      </section>
+
+      <section class="slide" id="thankyou">
+        <h2>Thank You</h2>
+        <p>Yura Zenevich</p>
+        <p>Email: yzenevich@mozilla.com</p>
+        <p>IRC: yzen</p>
+        <p>Twitter: yura_zen</p>
+      </section>
+
+      <div aria-role="navigation">
+        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+      </div>
+      <p class="deck-status" aria-role="status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
+      </p>
+    </div>
+
+  <script src="../../lib/jquery.min.js"></script>
+  <script src="../../lib/deck.js/core/deck.core.js"></script>
+  <script src="../../lib/deck.js/extensions/menu/deck.menu.js"></script>
+  <script src="../../lib/deck.js/extensions/status/deck.status.js"></script>
+  <script src="../../lib/deck.js/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../lib/deck.js/extensions/scale/deck.scale.js"></script>
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+
+  </body>
+</html>
