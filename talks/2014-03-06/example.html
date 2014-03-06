@@ -1,83 +1,40 @@
 <html><head>
     <title>Accessibility Challenge</title>
-    <style>
-      .tabs {
-        position: relative;
-      }
-
-      .tabs > div > div {
-        border: 1px solid #222;
-        position: absolute;
-        top: calc(1.5rem + 1px);
-        width: 600px;
-        height: 300px;
-        overflow: auto;
-        background-color: #fff;
-        visibility: hidden;
-      }
-
-      .tabs > div > div p {
-        margin: 1rem;
-      }
-
-      .tabs > div > a {
-        border: 1px solid #44f;
-        height: 1.5rem;
-        display: block;
-        float: left;
-        color: #000;
-        text-decoration: none;
-        padding: 0 0.5rem;
-        background-color: #eef;
-        margin-right: 1px;
-      }
-
-      .tabs > div:target > div {
-        z-index: 1;
-        visibility: visible;
-      }
-
-      .tabs > div:target > a {
-        background-color: #fef;
-      }
-
-    </style>
+    <link rel="stylesheet" media="screen" href="./css/examle.css">
   </head>
   <body>
     <h1>Accessibility Challenge</h1>
 
     <p>Make this web application accessible</p>
 
-    <button>BLA BLA BLA</button>
-
-    <div class="tabs" role="tablist">
-      <div id="dogge">
-        <a href="#dogge" role="tab">Dogge</a>
-        <div role="tabpanel">
+    <ul class="tabs">
+      <li>
+        <a href="#doge">Dogge</a>
+        <div id="doge">
           <img src="https://pbs.twimg.com/media/BfathorCYAEwiDD.jpg"></img>
           <!--<img src="https://pbs.twimg.com/media/BfathorCYAEwiDD.jpg" alt="Doge Ice Cream"></img>-->
         </div>
-      </div>
-      <div id="focus">
-        <a href="#focus" role="tab">Focus</a>
-        <div role="tabpanel">
+      </li>
+      <li>
+        <a href="#focus">Focus</a>
+        <div id="focus">
           <input type="text" placeholder="Am I Focused?" />
         </div>
-      </div>
-      <div id="hippie">
-        <a href="#hippie" role="tab">Hippie</a>
-        <div role="tabpanel">
+      </li>
+      <li>
+        <a href="#hippie">Hippie</a>
+        <div id="hippie">
           <p>Harmful electromagnetic fields trust the process tofu east-west soul-level contract somatic, world peace tapping ecofriendly craniosacral. Yoni burning man promoting positive change watsu consciousness mystic, kelp fertility awareness chia seeds. Holistic workshop yogic prayer flags the healing properties of, closing circle higher cosmic force taurus. Farm to table doula visualization practices healing energy, continuum ganesh hacky sack sound healing asana twelfth house.</p>
           <p>Tofurkey as we honor aho rites of passage to end suffering, tibetan singing bowl incense. My brothers and sisters holographic resonance astral plane enlightenment, vitamix ancient spiritual traditions. Hemp seed spoken word soul-level contract acroyoga jasmine meditation popcorn with brewers yeast chia seeds healer, fair trade harmony. Asana braggs embracing and moving towards combined energy fields shiva, seasonal earth day LSD prayer flags. Agave infinite blessings the power of intention retreat integral, gifting circle yerba matte djembe prayerformance.</p>
         </div>
-      </div>
-      <div id="hipster">
-        <a href="#hipster" role="tab">Hipster</a>
-        <div role="tabpanel">
+      </li>
+      <li>
+        <a href="#hipster">Hipster</a>
+        <div id="hipster">
           <p>Mixtape officia nulla, DIY consectetur hoodie fixie ennui Echo Park VHS salvia next level sriracha authentic delectus. Ethnic fugiat nihil chillwave. Duis sunt art party brunch 8-bit, slow-carb reprehenderit consequat Cosby sweater. Deserunt occaecat plaid 3 wolf moon, dreamcatcher delectus pork belly squid literally Echo Park Intelligentsia ethnic vegan incididunt in. Terry Richardson eiusmod post-ironic ad VHS. Mollit Vice Tonx art party, commodo Godard Williamsburg plaid. Tousled small batch asymmetrical magna.</p>
           <p>Fanny pack synth exercitation, fap Terry Richardson sapiente wolf tempor lo-fi delectus forage. Seitan Austin Neutra, flexitarian chia sapiente adipisicing authentic Godard ethical semiotics. Pork belly seitan 8-bit fingerstache quinoa. VHS twee officia, letterpress polaroid fap street art stumptown Tonx lo-fi laborum. Helvetica excepteur tattooed eu ugh tempor. Tattooed tofu meggings, commodo veniam officia deep v Thundercats ut magna photo booth McSweeney's. Aliquip exercitation do, qui kogi assumenda polaroid hella typewriter ut veniam.</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </body>
 </html>

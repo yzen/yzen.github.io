@@ -1,0 +1,39 @@
+.tabs {
+  position: relative;
+  list-style: none;
+}
+.tabs > li > div {
+  border: 1px solid #222;
+  position: absolute;
+  top: calc(1.5rem + 1px);
+  width: 600px;
+  height: 500px;
+  overflow: auto;
+  background-color: #fff;
+  /*visibility: hidden;*/
+}
+.tabs > li > div p {
+  margin: 1rem;
+}
+.tabs > li > a {
+  border: 1px solid #44f;
+  height: 1.5rem;
+  display: block;
+  float: left;
+  color: #000;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  background-color: #eef;
+  margin-right: 1px;
+}
+.tabs > li > div:target {
+  z-index: 1;
+  /*visibility: visible;*/
+}
+/* .tabs > div:target > a {
+  background-color: #fef;
+} */
+/* .tabs > div input:focus, .tabs > div input:hover {
+  outline:1px solid red;
+  background:yellow;
+} */
