@@ -276,7 +276,7 @@ layout: nil
       <section class="slide" id="whattodo-8">
         <h2>What Can I Do?</h2>
         <p>
-          <h3>If you HTML is valid -<strong> GOOD</strong></h3>
+          <h3>If your HTML is valid -<strong> GOOD</strong></h3>
           <h3>If you follow WCAG guidelines -<strong> AMAZING</strong></h3>
         </p>
       </section>
@@ -298,8 +298,8 @@ layout: nil
         </ul>
       </section>
 
-      <section class="slide" id="aria-roles">
-        <h2>Aria Roles</h2>
+      <section class="slide" id="aria-roles-1">
+        <h2>ARIA Roles</h2>
         <p>Indicate the type of the element. Provides the semantics.</p>
         <ul>
           <li class="slide">
@@ -307,33 +307,161 @@ layout: nil
             <ul>
               <li class="slide">
                 Widget Roles:<code> button, alert, dialog, tablist, tabpanel, tab...</code>
-              </li>
-              <li class="slide">
-                Document Structure Roles:<code> article, math, presentation, toolbar...</code>
-              </li>
-              <li class="slide">
-                Landmark Roles:<code> main, search, complementary...</code>
+                <pre><code>&lt;div role="dialog" hidden&gt;
+  &lt;h2 id="dialogTitle"&gt;This is a dialog title&lt;/h2&gt;
+  &lt;p id="dialogDesc"&gt;This is a description of what this dialog is about.&lt;/p&gt;
+  &lt;button&gt;Close&lt;/button&gt;
+&lt;/div&gt;
+                </code></pre>
+                <pre><code>&lt;ul role="tablist"&gt;
+  &lt;li&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;div role="tabpanel" id="fruits"&gt;...&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;div role="tabpanel" id="vegetables"&gt;...&lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+                </code></pre>
               </li>
             </ul>
           </li>
         </ul>
       </section>
 
-      <section class="slide" id="aria-states">
-        <h2>Aria States and Properties</h2>
+      <section class="slide" id="aria-roles-2">
+        <h2>ARIA Roles</h2>
+        <p>Indicate the type of the element. Provides the semantics.</p>
+        <ul>
+          <li>
+            <h3>Examples of Roles</h3>
+            <ul>
+              <li>
+                Document Structure Roles:<code> article, math, presentation, toolbar...</code>
+                <pre><code>&lt;ul role="tablist"&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;div role="tabpanel" id="fruits"&gt;...&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;div role="tabpanel" id="vegetables"&gt;...&lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+                </code></pre>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-roles-3">
+        <h2>ARIA Roles</h2>
+        <p>Indicate the type of the element. Provides the semantics.</p>
+        <ul>
+          <li>
+            <h3>Examples of Roles</h3>
+            <ul>
+              <li>
+                Landmark Roles:<code> main, search, log, complementary...</code>
+                 <pre><code>&lt;main role="main"&gt;
+  Content here is part of the main region of the document
+  ...
+&lt;/main&gt;
+                </code></pre>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-states-1">
+        <h2>ARIA States and Properties</h2>
         <p>Provide specific Information about an object.</p>
         <ul>
           <li class="slide">
             <h3>Examples of States and Properties</h3>
             <ul>
               <li class="slide">
-                Global States and Properties:<code> aria-describedby, aria-disabled, aria-controls, aria-labelledby...</code>
+                Global States and Properties:<code> aria-describedby, aria-labelledby, aria-disabled...</code>
+                <pre><code>&lt;div role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc" hidden&gt;
+  &lt;h2 id="dialogTitle"&gt;This is a dialog title&lt;/h2&gt;
+  &lt;p id="dialogDesc"&gt;This is a description of what this dialog is about.&lt;/p&gt;
+  &lt;button&gt;Close&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                <pre><code>&lt;ul role="tablist"&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
               </li>
-              <li class="slide">
-                Widget Attributes:<code> aria-checked, aria-haspopup, aria-autocomplete...</code>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-states-2">
+        <h2>ARIA States and Properties</h2>
+        <p>Provide specific Information about an object.</p>
+        <ul>
+          <li>
+            <h3>Examples of States and Properties</h3>
+            <ul>
+              <li>
+                Widget Attributes:<code> aria-selected, aria-controls, aria-haspopup, aria-autocomplete...</code>
+                <pre><code>&lt;ul role="tablist"&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" aria-selected="true"&gt;Fruits&lt;/a&gt;
+    &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" aria-selected="false"&gt;Vegetables&lt;/a&gt;
+    &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
               </li>
-              <li class="slide">
-                Relationship Attributes: <code>aria-posinset, aria-setsize...</code>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="slide" id="aria-states-2">
+        <h2>ARIA States and Properties</h2>
+        <p>Provide specific Information about an object.</p>
+        <ul>
+          <li>
+            <h3>Examples of States and Properties</h3>
+            <ul>
+              <li>
+                Relationship Attributes:<code> aria-controls, aria-owns, aria-posinset, aria-setsize...</code>
+                <pre><code>&lt;ul role="tablist"&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" aria-controls="fruits" aria-selected="true"&gt;Fruits&lt;/a&gt;
+    &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li role="presentation"&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" aria-controls="vegetables" aria-selected="false"&gt;Vegetables&lt;/a&gt;
+    &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
               </li>
             </ul>
           </li>
