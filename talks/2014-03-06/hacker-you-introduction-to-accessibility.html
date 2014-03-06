@@ -315,11 +315,11 @@ layout: nil
                 </code></pre>
                 <pre><code>&lt;ul role="tablist"&gt;
   &lt;li&gt;
-    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" onclick="showFruits();"&gt;Fruits&lt;/a&gt;
     &lt;div role="tabpanel" id="fruits"&gt;...&lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" onclick="showVegetables();"&gt;Vegetables&lt;/a&gt;
     &lt;div role="tabpanel" id="vegetables"&gt;...&lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -341,11 +341,11 @@ layout: nil
                 Document Structure Roles:<code> article, math, presentation, toolbar...</code>
                 <pre><code>&lt;ul role="tablist"&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" onclick="showFruits();&gt;Fruits&lt;/a&gt;
     &lt;div role="tabpanel" id="fruits"&gt;...&lt;/div&gt;
   &lt;/li&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" onclick="showVegetables();"&gt;Vegetables&lt;/a&gt;
     &lt;div role="tabpanel" id="vegetables"&gt;...&lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -392,13 +392,13 @@ layout: nil
 &lt;/div&gt;</code></pre>
                 <pre><code>&lt;ul role="tablist"&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="fruits-tab" href="#fruits"&gt;Fruits&lt;/a&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" onclick="showFruits();&gt;Fruits&lt;/a&gt;
     &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
       ...
     &lt;/div&gt;
   &lt;/li&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="vegetables-tab" href="#vegetables"&gt;Vegetables&lt;/a&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" onclick="showVegetables();"&gt;Vegetables&lt;/a&gt;
     &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
       ...
     &lt;/div&gt;
@@ -421,13 +421,13 @@ layout: nil
                 Widget Attributes:<code> aria-selected, aria-controls, aria-haspopup, aria-autocomplete...</code>
                 <pre><code>&lt;ul role="tablist"&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="fruits-tab" href="#fruits" aria-selected="true"&gt;Fruits&lt;/a&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" onclick="showFruits(); aria-selected="true"&gt;Fruits&lt;/a&gt;
     &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
       ...
     &lt;/div&gt;
   &lt;/li&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="vegetables-tab" href="#vegetables" aria-selected="false"&gt;Vegetables&lt;/a&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" onclick="showVegetables();" aria-selected="false"&gt;Vegetables&lt;/a&gt;
     &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
       ...
     &lt;/div&gt;
@@ -450,13 +450,13 @@ layout: nil
                 Relationship Attributes:<code> aria-controls, aria-owns, aria-posinset, aria-setsize...</code>
                 <pre><code>&lt;ul role="tablist"&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="fruits-tab" href="#fruits" aria-controls="fruits" aria-selected="true"&gt;Fruits&lt;/a&gt;
+    &lt;a role="tab" id="fruits-tab" href="#fruits" onclick="showFruits(); aria-controls="fruits" aria-selected="true"&gt;Fruits&lt;/a&gt;
     &lt;div role="tabpanel" id="fruits" aria-labelledby="fruits-tab"&gt;
       ...
     &lt;/div&gt;
   &lt;/li&gt;
   &lt;li role="presentation"&gt;
-    &lt;a role="tab" id="vegetables-tab" href="#vegetables" aria-controls="vegetables" aria-selected="false"&gt;Vegetables&lt;/a&gt;
+    &lt;a role="tab" id="vegetables-tab" href="#vegetables" onclick="showVegetables();" aria-controls="vegetables" aria-selected="false"&gt;Vegetables&lt;/a&gt;
     &lt;div role="tabpanel" id="vegetables" aria-labelledby="vegetables-tab"&gt;
       ...
     &lt;/div&gt;
