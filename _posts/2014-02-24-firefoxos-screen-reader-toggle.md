@@ -6,7 +6,9 @@ title: FirefoxOS Screen Reader Toggle
 {{ page.title }}
 ================
 
-<p class="meta">24 Feb 2014 - Toronto, ON</p>
+<p class="meta">24 Feb 2014 (Updated: 7 Mar 2014) - Toronto, ON</p>
+
+**UPDATE:** After some initial user/developer trials we opted for a different hardware button combination instead of the power button press. Instead of pressing the power button three times, the user now needs to press volume up then volume down buttons three times to hear the instructions.
 
 This post is going to be an inaugural one for my new blog where I will try to give small updates about all things accessibility for **FirefoxOS**, and **Mozilla** in general.
 
