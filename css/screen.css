@@ -68,13 +68,20 @@ ul.posts span {
 }
 
 .site .title .logo {
-  background: url("../images/moza11y.png") no-repeat scroll 0 50% #FFFFFF;
   background-size: contain;
   width: 3em;
   height: 3em;
   vertical-align: middle;
   display: inline-block;
   margin: 0 0 0 1em;
+}
+
+.logo.a11y {
+  background: url("../images/moza11y.png") no-repeat scroll 0 50% #FFFFFF;
+}
+
+.logo.dino {
+  background: url("../images/mozdino.png") no-repeat scroll 0 50% #FFFFFF;
 }
 
 .site .title a {
