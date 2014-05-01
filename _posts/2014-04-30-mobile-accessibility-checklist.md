@@ -41,7 +41,7 @@ Text Equivalents
 ----------------
 
 * Text equivalent **MUST** be provided for every non strictly presentational non-text element within the app
-    * Use *alt* and *title* where appropriate
+    * Use *alt* and *title* where appropriate (*UPDATE*: See Steve Faulkner's post about [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/))
     * If the above attributes are not applicable use attributes such as ```aria-label, aria-labelledby or aria-describedby``` ([ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header))
 * Images of text **MUST** be avoided
 * All form controls **MUST** be labeled for the screen reader user
