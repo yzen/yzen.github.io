@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FirefoxOS Accessibly Tabs
+title: FirefoxOS Accessible Tabs
 ---
 
 {{ page.title }}
