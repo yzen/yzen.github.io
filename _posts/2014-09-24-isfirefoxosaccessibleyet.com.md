@@ -1,5 +1,6 @@
 ---
 layout: post
+category: firefoxos
 title: isfirefoxosaccessibleyet.com
 ---
 

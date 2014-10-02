@@ -1,5 +1,6 @@
 ---
 layout: post
+category: firefoxos
 title: Building and Flashing a Firefox OS device
 ---
 

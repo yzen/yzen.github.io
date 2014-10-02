@@ -1,5 +1,6 @@
 ---
 layout: post
+category: firefoxos
 title: Mobile Accessibility Checklist
 ---
 
