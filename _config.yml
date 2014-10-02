@@ -4,3 +4,6 @@ pygments: true
 source:   .
 layouts:  ./_layouts
 markdown: rdiscount
+
+name: Yura Zenevich
+url: http://yzen.github.io
