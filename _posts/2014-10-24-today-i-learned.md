@@ -13,7 +13,7 @@ With some great help from Rob Wood from Mozilla Firefox OS Automation team, I fi
 
 It is currently [impossible](https://bugzilla.mozilla.org/show_bug.cgi?id=1070830) to develop / debug **Gaia** using Firefox for Desktop. Thus, it's a pretty big barrier for new contributors who are just starting out with **Gaia**. Turns out, it is fairly easy to run **Gaia** codebase with *B2G Desktop* build. Here are the instructions:
 
-Prerequisits:
+Prerequisites:
 ------------
 
 * Download and install [B2G Desktop Nightly](http://nightly.mozilla.org/#Desktop Boot2Gecko) build
